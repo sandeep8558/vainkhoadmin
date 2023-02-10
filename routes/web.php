@@ -19,7 +19,7 @@ Route::group(['middleware'=>['auth']], function(){
 
 /* Administrator Routes */
 Route::group(['middleware'=>['auth', 'administrator']], function(){
-    Route::get('/administrator', [App\Http\Controllers\WebsiteController::class, 'welcome']);
+    Route::get('/administrator', [App\Http\Controllers\AdministratorController::class, 'administrator']);
 });
 
 /* Customer Routes */

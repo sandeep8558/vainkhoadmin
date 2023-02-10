@@ -26,8 +26,6 @@
 
         <ul class="list-group mb-5 rounded-0 accordion p-1" id="accordionExample">
 
-        <!--
-
             <li class="list-group-item p-0 bg-light mb-1 border-0 shadow-none">
                 <a class="btn btn-block text-left shadow-none p-3 rounded-big  {{ (request()->is('administrator')) ? 'btn-dark' : 'btn-outline-dark' }}" href="/administrator">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -35,22 +33,9 @@
                 </a>
             </li>
 
-            <li class="list-group-item p-0 bg-light mb-1 border-0 shadow-none">
-                <a class="btn btn-block text-left shadow-none p-3 rounded-big  {{ (request()->is('administrator/homepage/*')) ? 'btn-dark' : 'btn-outline-dark' }}" href="#" onclick="return false;" data-toggle="collapse" data-target="#collapseAccounts">
-                    <i class="fas fa-fw fa-user-alt"></i>
-                    My Permissions
-                    <i class="fas fa-angle-down float-right mt-1"></i>
-                </a>
-                <ul class="list-group list-group-flush collapse {{ (request()->is('administrator/homepage/*')) ? 'show' : '' }}" data-parent="#accordionExample" id="collapseAccounts">
-                    @if(Auth::user())
-                        @foreach(Auth::user()->roles as $role) 
-                            <li class="list-group-item p-0 shadow-none border-0">
-                                <a class="btn btn-block text-left shadow-none border rounded-big pl-5 py-2 mt-1" href="/{{strtolower($role->role)}}">{{$role->role}}</a>
-                            </li>
-                        @endforeach
-                    @endif
-                </ul>
-            </li>
+        <!--
+
+            
 
             <li class="list-group-item p-0 bg-light mb-1 border-0 shadow-none">
                 <a class="btn btn-block text-left shadow-none p-3 rounded-big  {{ (request()->is('administrator/offers_manager')) ? 'btn-dark' : 'btn-outline-dark' }}" href="/administrator/offers_manager">

@@ -25,8 +25,7 @@ class WebsiteController extends Controller
             ]);
         }
 
-        return "Praise the Lord";
-        //return redirect("/home");
+        return view("layouts.website");
     }
 
 }
