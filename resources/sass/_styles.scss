@@ -227,3 +227,18 @@
     line-height: 1.2em;
     -webkit-box-orient: vertical;
 }
+
+.btn-full {
+    width: 100%;
+    text-align: left !important;
+    background: transparent !important;
+  }
+  
+  .btn-full:active,
+  .btn-full:focus {
+    border: 0px;
+  }
+
+  .no-caret::after {
+    content: none;
+  }
